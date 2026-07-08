@@ -1,25 +1,25 @@
 class Tycho < Formula
-  desc "Privacy-first usage analytics for Claude Code's local JSONL transcripts"
+  desc "Privacy-first usage analytics for local AI tool transcripts"
   homepage "https://github.com/vscarpenter/tycho-cli"
-  version "0.2.0"
+  version "0.3.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.2.0/tycho-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "463596c0b30628c157cfac1f50fd4f2a7cadfd90bce032a2f0f5347e356b1a4e"
+      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.3.0/tycho-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "38042bdefc5be79aada115ea361e06a09c3da3829dff8e3dc375b41aee4329df"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.2.0/tycho-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "aa1534499829a6861a7c5994e9f1020636ff90f8087fe47ab1efb6e1566a4de6"
+      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.3.0/tycho-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "15d406278759a11be693e21ca56945c5b0d0e8f8d7d43f68e3d1d9d34dacab89"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.2.0/tycho-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "f96c62076ac1fd2d60b77142a30f10ac82f20585c7d62ca963d27d19f5666636"
+      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.3.0/tycho-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "464b45e23963b3cb2aaccd166aa4d39d945e2c1445cee342ca93757744448398"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.2.0/tycho-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "74acbf4df1b89b05d7b31c57ad4279e2fc3e3dbf6474a420e93a7359bac5b566"
+      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.3.0/tycho-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "f5b2d824d8a54af096d67477e1f12bb884a2361c151ab1a2eb49bf6e69107436"
     end
   end
   license "MIT"
