@@ -1,25 +1,25 @@
 class Tycho < Formula
   desc "Privacy-first usage analytics for local AI tool transcripts"
   homepage "https://github.com/vscarpenter/tycho-cli"
-  version "0.7.0"
+  version "0.8.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.7.0/tycho-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "47afb409863f66e62b2b8d1c1dd1fd13813a964d4aae9fa4def22d30509dd3a2"
+      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.8.0/tycho-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "9e2348ee8c7c00edb438691a8b9d9b13d7478d3b3ce972db96fda65e5fe7b8fb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.7.0/tycho-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "a8de9ffc1a5e3dca60da0bba33fbadd0d9f0740c4512b34e677bf0195aebd731"
+      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.8.0/tycho-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "f1641f065a5130dd32bd03f5720b7aaa7ef93602f92f3db3108543e34b544827"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.7.0/tycho-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "fecd039756b670ee7fb3a4161e5ecbb4841dc749d0d84102086d0a175fa0ea3a"
+      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.8.0/tycho-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "82464e6a58248e4849570d7d30fb94944d1e71c9a0cc7e5d5301590bbeb9adfa"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.7.0/tycho-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4708a1e878e23e5eb8d604a508f8655f841f10a9437005a54f0fd010f8f5110a"
+      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.8.0/tycho-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "c5d9ec0ee5fa24c8386a04e9744579820790c60982041bca68dbd9524bde5736"
     end
   end
   license "MIT"
