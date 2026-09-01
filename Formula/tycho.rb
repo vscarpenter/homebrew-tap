@@ -1,25 +1,25 @@
 class Tycho < Formula
   desc "Privacy-first usage analytics for local AI tool transcripts"
   homepage "https://github.com/vscarpenter/tycho-cli"
-  version "0.6.0"
+  version "0.7.0"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.6.0/tycho-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "26d0994a66a8bf07ade612c9a435674aea18bf41a4463aa63e3bfc863490049f"
+      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.7.0/tycho-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "47afb409863f66e62b2b8d1c1dd1fd13813a964d4aae9fa4def22d30509dd3a2"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.6.0/tycho-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "c59a62ded8f4c11c4e7ff6874f1b1f5632346ba173fb5f62ded156f2a2727cd6"
+      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.7.0/tycho-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "a8de9ffc1a5e3dca60da0bba33fbadd0d9f0740c4512b34e677bf0195aebd731"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.6.0/tycho-cli-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "bc49a06787b7ed22a02241e025ba6fc9e3fd6b91fc632334c9be114f7efda393"
+      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.7.0/tycho-cli-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "fecd039756b670ee7fb3a4161e5ecbb4841dc749d0d84102086d0a175fa0ea3a"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.6.0/tycho-cli-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "6ba770dbbd7a08cb38f3d885095e620da47cd6e20984078c6d9a01066ddde7ed"
+      url "https://github.com/vscarpenter/tycho-cli/releases/download/v0.7.0/tycho-cli-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "4708a1e878e23e5eb8d604a508f8655f841f10a9437005a54f0fd010f8f5110a"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Tycho < Formula
   end
 
   def install
-    bin.install "tycho" if OS.mac? && Hardware::CPU.arm?
-    bin.install "tycho" if OS.mac? && Hardware::CPU.intel?
-    bin.install "tycho" if OS.linux? && Hardware::CPU.arm?
-    bin.install "tycho" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "tycho"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "tycho"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "tycho"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "tycho"
+    end
 
     install_binary_aliases!
 
